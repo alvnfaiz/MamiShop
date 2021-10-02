@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//login register logout
+Route::get('/login', 'AuthController@login')->name('login');
+Route::post('/login', 'AuthController@postLogin');
+Route::get('/register', 'AuthController@register')->name('register');
+Route::post('/register', 'AuthController@postRegister');
+Route::get('/logout', 'AuthController@logout')->name('logout');
+Route::get('/forget-password', 'AuthController@forgetPassword')->name('forget-password');
+Route::post('/forget-password', 'AuthController@postForgetPassword');
+Route::get('/reset-password/{token}', 'AuthController@resetPassword')->name('reset-password');
+
