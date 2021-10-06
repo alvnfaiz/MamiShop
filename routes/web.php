@@ -12,9 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-Route::get('/', 'IndexController@index')->name('index');
+Route::get('/', 'HomeController@index')->name('home');
 //Login Routes
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login');
@@ -37,8 +35,4 @@ Route::get('/social/handle/{provider}', 'Auth\SocialController@handle')->name('s
 
 
 //Path: routes\web.php 
-Route::get('/', 'HomeController@index')->name('home');
-
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
