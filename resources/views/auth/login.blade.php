@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<div class="container m-auto">
+    <div class="row justify-items-center">
+        <div class="w-3/5 p-8 m-auto border-solid shadow-lg">
+            asd
+            asda
+            gerer
+            eger
+            geerger er
+        </div>
+        <div class="hidden col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -51,7 +58,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="mb-0 form-group row">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
