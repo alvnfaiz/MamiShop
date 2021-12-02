@@ -22,8 +22,13 @@
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
         "tailwindcss": "^2.2.16",
-        "vue": "^2.6.12",
-        "vue-loader": "^15.9.8",
-        "vue-template-compiler": "^2.6.12"
+        "source-map-loader": "^1.0.0"
+    },
+    "dependencies": {
+        "@headlessui/vue": "^1.4.2",
+        "@heroicons/vue": "^1.0.5",
+        "vue": "^3.2.23",
+        "vue-loader": "^16.8.3",
+        "vue-router": "^4.0.12"
     }
 }

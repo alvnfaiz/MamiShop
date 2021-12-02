@@ -29,3 +29,15 @@ Route::middleware('auth')->name('user.')->prefix('user')->group(function () {
     Route::get('/profile', [App\Http\Controllers\User\UserHomeController::class, 'profile'])->name('profile');
     Route::get('/settings', [App\Http\Controllers\User\UserHomeController::class, 'settings'])->name('settings');
 });
+
+
+
+
+
+//Admin
+Route::middleware('isAdmin')->name('admin.')->prefix('admin')->group(function () {
+    Route::get('/', [App\Http\Controllers\Admin\AdminHomeController::class, 'index'])->name('dashboard');
+    Route::get('/home', [App\Http\Controllers\Admin\AdminHomeController::class, 'index'])->name('home');
+    Route::get('/profile', [App\Http\Controllers\Admin\AdminHomeController::class, 'profile'])->name('profile');
+    Route::get('/settings', [App\Http\Controllers\Admin\AdminHomeController::class, 'settings'])->name('settings');
+});
